@@ -75,7 +75,7 @@ const IndexPage: React.FC = () => {
               textAlign="center"
               maxW="800px"
             >
-              SOFTWARE SOLUTIONS TAILORED TO YOUR NEEDS
+              SOFTWARE SOLUTIONS AT YOUR SERVICE
             </Text>
             <Text
               color="#dedede"
@@ -85,10 +85,10 @@ const IndexPage: React.FC = () => {
               maxW="600px"
             >
               With more{" "}
-              <strong style={{ color: "#fff" }}>
+              <strong style={{ color: "#dedede" }}>
                 than 12 years of experience innovating{" "}
               </strong>
-              , at Euda we launch your digital project developed with technology
+              , we launch your digital project developed with technology
               and processes that meet international standards processes
             </Text>
           </Box>
