@@ -16,6 +16,10 @@ const TeamSkillsCard: React.FC<Props> = ({image, text}) => {
                 alignContent="center"
                 maxW="180px"
                 rounded="20px"
+                transition='all .2s ease-in-out'
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
               >
                 <Image
                   w="100px"
