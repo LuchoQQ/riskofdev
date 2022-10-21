@@ -35,6 +35,7 @@ const IndexPage: React.FC = () => {
           h="100vh"
           fit="cover"
           filter="brightness(0.8)"
+
         />
 
         <Flex
@@ -44,20 +45,21 @@ const IndexPage: React.FC = () => {
           justifyContent="center"
         >
           <ChakraBox
-           style={{
-            overflow: "hidden",
-          }}
-          animate={{
-            y: [10,-10, 10],
-          }}
-          // @ts-ignore no problem in operation, although type error appears.
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "loop",
-          }}
-          w="40%"
+            style={{
+              overflow: "hidden",
+            }}
+            animate={{
+              y: [10, -10, 10],
+              transform: ["rotate(0deg)", "rotate(10deg)", "rotate(0deg)"],
+            }}
+            // @ts-ignore no problem in operation, although type error appears.
+            transition={{
+              duration: 15,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            w="40%"
           >
             <Image
               src="https://res.cloudinary.com/diylksocz/image/upload/v1654723277/Egvz6bdXsAIDorV_jahu6h.png"

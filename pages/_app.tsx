@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       primary: "Merriweather Sans",
       secondary: "Bebas Neue",
     },
+    colors: {
+      primary: "#172E65",
+    }
   });
 
   return (

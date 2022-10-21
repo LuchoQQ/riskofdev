@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, useTheme, Text, Icon, Image } from "@chakra-ui/react";
 import { GiAlienBug } from "react-icons/gi";
-import Link from "next/link";
 
 const Header: React.FC = () => {
   const theme = useTheme();
+  const [scrollY, setScrollY] = React.useState(0);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollY(window.scrollY);
+    });
+  }, [scrollY]);
   const navLinks = [
     {
       Index: "/",
-    },
-    {
-      "Our Work": "/work",
     },
     {
       Services: "/services",
@@ -36,7 +38,9 @@ const Header: React.FC = () => {
         pl="4rem"
         pr="3rem"
         w="100%"
-        py="2rem"
+        transition="all .2s ease"
+        py={scrollY > 0 ? "1rem" : "2rem"}
+        bg={scrollY > 0 ? "rgba(0,0,0,0.9)" : "transparent"}
       >
         <Flex gap="1rem">
           <Icon
@@ -56,7 +60,6 @@ const Header: React.FC = () => {
         </Flex>
         <Flex gap="1rem" alignItems="center" ml="auto" fontSize=".8rem">
           {navLinks.map((link, index) => {
-            console.log(link);
             return (
               <>
                 <Text
@@ -64,7 +67,7 @@ const Header: React.FC = () => {
                   color="#dedede"
                   _hover={{ color: theme.colors.primary }}
                   textTransform="uppercase"
-                  cursor='pointer'
+                  cursor="pointer"
                 >
                   {Object.keys(link)[0]}
                 </Text>
