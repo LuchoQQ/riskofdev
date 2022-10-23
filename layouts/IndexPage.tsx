@@ -35,7 +35,6 @@ const IndexPage: React.FC = () => {
           h="100vh"
           fit="cover"
           filter="brightness(0.8)"
-
         />
 
         <Flex
@@ -88,11 +87,12 @@ const IndexPage: React.FC = () => {
               <strong style={{ color: "#dedede" }}>
                 than 12 years of experience innovating{" "}
               </strong>
-              , we launch your digital project developed with technology
-              and processes that meet international standards processes
+              , we launch your digital project developed with technology and
+              processes that meet international standards processes
             </Text>
           </Box>
         </Flex>
+        
       </Flex>
     </>
   );

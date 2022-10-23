@@ -9,10 +9,12 @@ type Props = {
   text: string;
 };
 
+
 const ServicesCard: React.FC<Props> = ({ icon, text }) => {
   const theme = useTheme();
   return (
     <>
+
       <Flex
         as={motion.div}
         whileHover={{ translateY: -10 }}
