@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 import React from "react";
 
 const TeamCard: React.FC = () => {
-    const theme = useTheme()
+  const theme = useTheme();
   return (
     <>
       <Flex
@@ -16,6 +16,7 @@ const TeamCard: React.FC = () => {
         alignItems="center"
         flexDir="column"
         boxShadow="0px 0px 10px 10px rgba(0,0,0,0.1)"
+        position="relative"
       >
         <Image
           py="1rem"
@@ -32,7 +33,8 @@ const TeamCard: React.FC = () => {
         >
           Rigoberto Baratuso
         </Text>
-        <Flex gap="1rem" py="1rem">
+
+        <Flex gap="1rem" py=".5rem" mt="auto">
           <Flex
             w="30px"
             h="30px"
@@ -41,7 +43,7 @@ const TeamCard: React.FC = () => {
             justifyContent="center"
             alignContent="center"
           >
-            <Icon as={FaLinkedinIn} alignSelf="center" />
+            <Icon as={FaLinkedinIn} alignSelf="center" cursor="pointer" />
           </Flex>
           <Flex
             w="30px"
@@ -51,7 +53,7 @@ const TeamCard: React.FC = () => {
             justifyContent="center"
             alignContent="center"
           >
-            <Icon as={AiFillGithub} alignSelf="center" />
+            <Icon as={AiFillGithub} alignSelf="center" cursor="pointer" />
           </Flex>
           <Flex
             w="30px"
@@ -61,7 +63,30 @@ const TeamCard: React.FC = () => {
             justifyContent="center"
             alignContent="center"
           >
-            <Icon as={FaLinkedinIn} alignSelf="center" />
+            <Icon as={FaLinkedinIn} alignSelf="center" cursor="pointer" />
+          </Flex>
+        </Flex>
+        <Flex
+          justifyContent="center"
+          alignContent="center"
+          p="1rem"
+          bg="#dedede"
+          w="100%"
+        >
+          <Flex
+            bg="#090909"
+            rounded="100px"
+            px="1rem"
+            py=".5rem"
+            cursor="pointer"
+          >
+            <Text
+              color="#f3f4f5"
+              fontFamily={theme.fonts.primary}
+              fontSize="sm"
+            >
+              Descargar CV
+            </Text>
           </Flex>
         </Flex>
       </Flex>
